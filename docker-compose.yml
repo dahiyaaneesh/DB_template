@@ -1,0 +1,22 @@
+services: # For database container.
+
+
+ db:
+    # https://hub.docker.com/_/postgres
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    # volumes:
+    #   - data:/data
+
+  # adminer:
+  #   image: adminer
+  #   depends_on:
+  #     - db
+  #   restart: always
+  #   ports:
+  #   - 8080:8080
+  
